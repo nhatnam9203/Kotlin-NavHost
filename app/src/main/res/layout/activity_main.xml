@@ -22,12 +22,27 @@
 <!--        app:navGraph="@navigation/my_nav"-->
 <!--        tools:layout_editor_absoluteX="1dp"-->
 <!--        tools:layout_editor_absoluteY="1dp" />-->
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/singleFragment"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
 
-    </FrameLayout>
+<!--    <FrameLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:id="@+id/singleFragment"-->
+<!--        tools:layout_editor_absoluteX="1dp"-->
+<!--        tools:layout_editor_absoluteY="1dp">-->
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/design_default_color_primary"
+        app:itemIconTint="@color/design_default_color_secondary"
+        android:background="@color/cardview_dark_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/nav_menu" />
+
+    <!--    </FrameLayout>-->
 </androidx.constraintlayout.widget.ConstraintLayout>

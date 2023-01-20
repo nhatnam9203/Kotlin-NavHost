@@ -22,9 +22,9 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         val navController = navHostFragment.navController
         setupActionBarWithNavController(navController)*/
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.singleFragment, HomeFragment())
-        transaction.commit()
+//        val transaction = supportFragmentManager.beginTransaction()
+//        transaction.add(R.id.singleFragment, HomeFragment())
+//        transaction.commit()
         setContentView(view)
     }
 

@@ -51,10 +51,10 @@ class HomeFragment : Fragment() {
         binding.btnLinkHomeFragment.setOnClickListener {
 //            findNavController().navigate(R.id.dataFragment)
 
-            val transaction =  requireActivity().supportFragmentManager.beginTransaction()
-            transaction.addToBackStack(null)
-            transaction.replace(R.id.singleFragment, DataFragment.newInstance("test",""))
-            transaction.commit()
+//            val transaction =  requireActivity().supportFragmentManager.beginTransaction()
+//            transaction.addToBackStack(null)
+//            transaction.replace(R.id.singleFragment, DataFragment.newInstance("test",""))
+//            transaction.commit()
 
         }
         return binding.getRoot();
