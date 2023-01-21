@@ -2,7 +2,9 @@ package com.example.navhost
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.Window
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.navhost.databinding.ActivityMainBinding
@@ -25,7 +27,37 @@ class MainActivity : AppCompatActivity() {
 //        val transaction = supportFragmentManager.beginTransaction()
 //        transaction.add(R.id.singleFragment, HomeFragment())
 //        transaction.commit()
+        binding.apply{
+            bottomNav.setOnItemSelectedListener {
+                Log.d("MainActivity","debug item bottom : $it")
+                when(it.itemId){
+                    R.id.home ->{
+                        loadFragmentMenu(HomeFragment())
+                        true
+                    }
+                    R.id.service ->{
+                        loadFragmentMenu(DataFragment())
+                        true
+                    }
+                    R.id.settings ->{
+                        loadFragmentMenu(SettingFragment())
+                        true
+                    }
+                    else -> {
+                        true
+                    }
+                }
+            }
+
+        }
         setContentView(view)
+    }
+
+
+    private fun loadFragmentMenu(fragment: Fragment){
+        var transaction = supportFragmentManager.beginTransaction()
+        transaction?.replace(R.id.containerLayout, fragment)
+        transaction.commit()
     }
 
     companion object{
