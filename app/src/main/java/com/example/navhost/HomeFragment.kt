@@ -6,10 +6,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.navigation.fragment.findNavController
 import com.example.navhost.databinding.ActivityMainBinding
 import com.example.navhost.databinding.FragmentDataBinding
 import com.example.navhost.databinding.FragmentHomeBinding
+import com.google.android.material.bottomsheet.BottomSheetDialog
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -55,6 +57,23 @@ class HomeFragment : Fragment() {
 //            transaction.addToBackStack(null)
 //            transaction.replace(R.id.singleFragment, DataFragment.newInstance("test",""))
 //            transaction.commit()
+
+        }
+
+        binding.btnShowBottomSheet.setOnClickListener {
+            val bottomSheet = BottomSheetDialog(requireContext())
+            val view = layoutInflater.inflate(R.layout.bottom_sheet_dialog_layout,null)
+            val btnClose = view.findViewById<Button>(R.id.btnCloseBottomSheet)
+
+            btnClose.setOnClickListener {
+                bottomSheet.dismiss()
+            }
+
+            bottomSheet.setCancelable(false)
+            bottomSheet.setContentView(view)
+
+            bottomSheet.show()
+
 
         }
         return binding.getRoot();
