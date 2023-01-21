@@ -56,6 +56,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun loadFragmentMenu(fragment: Fragment){
         var transaction = supportFragmentManager.beginTransaction()
+        transaction.setCustomAnimations(R.anim.enter_from_right,0)
         transaction?.replace(R.id.containerLayout, fragment)
         transaction.commit()
     }
