@@ -61,22 +61,24 @@ class HomeFragment : Fragment() {
         }
 
         binding.btnShowBottomSheet.setOnClickListener {
-            val bottomSheet = BottomSheetDialog(requireContext())
-            val view = layoutInflater.inflate(R.layout.bottom_sheet_dialog_layout,null)
-            val btnClose = view.findViewById<Button>(R.id.btnCloseBottomSheet)
-
-            btnClose.setOnClickListener {
-                bottomSheet.dismiss()
-            }
-
-            bottomSheet.setCancelable(false)
-            bottomSheet.setContentView(view)
-
-            bottomSheet.show()
-
-
+            showBottomSheet()
         }
         return binding.getRoot();
+    }
+
+    private fun showBottomSheet(){
+        val bottomSheet = BottomSheetDialog(requireContext())
+        val view = layoutInflater.inflate(R.layout.bottom_sheet_dialog_layout,null)
+        val btnClose = view.findViewById<Button>(R.id.btnCloseBottomSheet)
+
+        btnClose.setOnClickListener {
+            bottomSheet.dismiss()
+        }
+
+        bottomSheet.setCancelable(false)
+        bottomSheet.setContentView(view)
+
+        bottomSheet.show()
     }
 
     companion object {
