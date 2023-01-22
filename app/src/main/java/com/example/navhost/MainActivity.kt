@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Window
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.whenCreated
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.navhost.databinding.ActivityMainBinding
@@ -47,6 +48,7 @@ class MainActivity : AppCompatActivity() {
                         true
                     }
                 }
+
             }
 
         }
