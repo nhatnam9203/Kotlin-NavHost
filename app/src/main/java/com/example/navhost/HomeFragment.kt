@@ -63,6 +63,7 @@ class HomeFragment : Fragment() {
         binding.btnShowBottomSheet.setOnClickListener {
             showBottomSheet()
         }
+
         return binding.getRoot();
     }
 
@@ -75,7 +76,7 @@ class HomeFragment : Fragment() {
             bottomSheet.dismiss()
         }
 
-        bottomSheet.setCancelable(false)
+        bottomSheet.setCancelable(true)
         bottomSheet.setContentView(view)
 
         bottomSheet.show()

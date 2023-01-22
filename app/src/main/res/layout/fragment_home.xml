@@ -5,10 +5,12 @@
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+
         >
         <!-- TODO: Update blank fragment layout -->
         <TextView
@@ -21,6 +23,11 @@
             android:layout_height="wrap_content"
             android:text="link to home fragment"
             android:id="@+id/btnLinkHomeFragment" />
+        <com.example.navhost.CustomItemVIew
+                android:id="@+id/id_custom_view_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"

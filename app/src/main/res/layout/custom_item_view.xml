@@ -12,6 +12,7 @@
             android:text="this is text custom view"
             android:textSize="18dp"
             android:textAllCaps="true"
+            android:id="@+id/id_custom_view_text_left"
             />
     <TextView
             android:layout_width="wrap_content"
@@ -20,5 +21,6 @@
             android:textSize="15dp"
             android:textColor="@color/design_default_color_error"
             android:textFontWeight="@integer/material_motion_duration_medium_2"
+            android:id="@+id/id_custom_view_text_right"
             />
 </LinearLayout>
