@@ -4,6 +4,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@drawable/ctr_bg"
         tools:context=".DataFragment">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -15,6 +16,7 @@
                 android:fitsSystemWindows="true"
                 app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
                 android:id="@+id/collapsingToolbar"
+                android:background="@drawable/ctr_bg"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
             <ImageView
@@ -32,12 +34,14 @@
     <androidx.core.widget.NestedScrollView
             app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
             android:padding="10dp"
+            android:background="@drawable/layout_bg"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/text_example_test"
+                android:layout_marginTop="80dp"
                 />
     </androidx.core.widget.NestedScrollView>
 
