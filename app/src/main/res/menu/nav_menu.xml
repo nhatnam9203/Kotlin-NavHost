@@ -12,4 +12,9 @@
         android:id="@+id/settings"
         android:icon="@drawable/ic_baseline_settings_24"
         android:title="Setting" />
+
+    <item
+        android:id="@+id/motion"
+        android:icon="@drawable/baseline_back_hand_24"
+        android:title="Motion" />
 </menu>

@@ -44,6 +44,10 @@ class MainActivity : AppCompatActivity() {
                         loadFragmentMenu(SettingFragment())
                         true
                     }
+                    R.id.motion ->{
+                        loadFragmentMenu(MotionFragment())
+                        true
+                    }
                     else -> {
                         true
                     }
